@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+﻿import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   Activity,
   AlertTriangle,
@@ -57,13 +57,13 @@ const EQ_BANDS: EqBand[] = [
 const INSIGHTS: Insight[] = [
   {
     title: 'Low-mid terlalu dominan',
-    message: 'Area 250–400 Hz terlihat tebal. Suara bisa terasa mendem atau boxy.',
+    message: 'Area 250â€“400 Hz terlihat tebal. Suara bisa terasa mendem atau boxy.',
     action: 'Coba cut 250 Hz / 315 Hz sekitar -2 sampai -3 dB.',
     severity: 'warn',
   },
   {
     title: 'Clarity vokal kurang keluar',
-    message: 'Area 2–4 kHz sedikit di bawah target. Artikulasi bisa kurang jelas.',
+    message: 'Area 2â€“4 kHz sedikit di bawah target. Artikulasi bisa kurang jelas.',
     action: 'Boost ringan 2.5 kHz atau 3.15 kHz, jangan berlebihan.',
     severity: 'info',
   },
@@ -272,7 +272,7 @@ function SpectrumCanvas() {
 }
 
 function ModeSelector({ mode, setMode }: { mode: Mode; setMode: (mode: Mode) => void }) {
-  const modes: { mode: Mode; icon: JSX.Element }[] = [
+  const modes: { mode: Mode; icon: React.ReactNode }[] = [
     { mode: 'Speech', icon: <Mic size={16} /> },
     { mode: 'Vocal', icon: <Headphones size={16} /> },
     { mode: 'Full Mix', icon: <Waves size={16} /> },
@@ -386,7 +386,7 @@ function BeforeAfterPanel() {
         <div className="compare-box after">
           <span>After target</span>
           <strong>Clearer speech</strong>
-          <p>250–400 Hz turun, presence lebih rapi.</p>
+          <p>250â€“400 Hz turun, presence lebih rapi.</p>
         </div>
       </div>
     </section>
@@ -464,3 +464,4 @@ export default function App() {
     </main>
   );
 }
+

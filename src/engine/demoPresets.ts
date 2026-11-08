@@ -6,10 +6,10 @@ export type DemoPreset = Readonly<{
   key: DemoPresetKey;
   label: string;
   subtitle: string;
-  average: readonly SpectrumPoint[];
-  live: readonly SpectrumPoint[];
-  target: readonly SpectrumPoint[];
-  eqTrace: readonly SpectrumPoint[];
+  average: SpectrumPoint[];
+  live: SpectrumPoint[];
+  target: SpectrumPoint[];
+  eqTrace: SpectrumPoint[];
   feedback?: Readonly<{
     freq: number;
     confidence: string;
